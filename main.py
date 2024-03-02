@@ -42,7 +42,17 @@ else:
         freq1 = input()
         freq2 = input()
         vals = bp_calculate(freq1, freq2)
-    print(f"enter a target frequency for your {filterType}")
+        print(vals)
+        exit()
+    print(f"enter a target frequency for your {filterType}, followed by the correct unit (hz, khz)")
+    freq = input()
+    if filterType == 'lpf' or filterType == 'lowpass':
+        vals = lp_calculate(freq)
+        print(vals)
+    elif filterType == 'hpf' or filterType == 'howpass':
+        vals = hp_calculate(freq)
+        print(vals)
+    
     
 
 
